@@ -1,0 +1,32 @@
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Numero de Cuenta</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of alumnos">
+            <th scope="row">{{alumno.idAlumno}}</th>
+            <td>{{alumno.nombre}}</td>
+            <td>{{alumno.apellido}}</td>
+            <td>{{alumno.num_cuenta}}</td>
+            <td>{{alumno.correo}}</td>
+            <td class="text-center">
+              <button (click)="editarAlumno(alumno.idAlumno)"
+              class="btn btn-secondary btn-sm me-2" style="border-radius: 8px;">Editar</button>
+              
+              <button (click)="eliminarAlumno(alumno.idAlumno)"
+              class="btn btn-sm" style="background-color: #f8d7da; color: #721c24;
+              border: none; border-radius: 8px;">Eliminar</button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+</div>

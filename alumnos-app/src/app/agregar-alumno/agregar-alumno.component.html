@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="container text-center" style="margin: 30px;">
+        <h3 style="color: white;">Agregar Alumno</h3>
+    </div>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="nombre" class="form-label" style="color: white;">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required="true"
+            [(ngModel)]="alumno.nombre">
+        </div>
+        <div class="mb-3">
+            <label for="apellido" class="form-label" style="color: white;">Apellido</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required="true"
+            [(ngModel)]="alumno.apellido">
+        </div>
+        <div class="mb-3">
+            <label for="numero-de-cuenta" class="form-label" style="color: white;">Numero de Cuenta</label>
+            <input type="text" class="form-control" id="numero-de-cuenta" name="numero-de-cuenta" required="true"
+            [(ngModel)]="alumno.num_cuenta">
+        </div>
+        <div class="mb-3">
+            <label for="correo" class="form-label" style="color: white;">Correo</label>
+            <input type="text" class="form-control" id="correo" name="correo" required="true"
+            [(ngModel)]="alumno.correo">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-secondary" style="border-radius: 8px;">Registrar</button>
+
+        </div>
+
+    </form>
+
+</div>
